@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: pink;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #heart-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .pixel-heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: fall 3s linear infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -30px;
+      left: random(100%);
+    }
+    100% {
+      top: 100vh;
+      left: random(100%);
+    }
+  }
+  
+  .envelope {
+    position: relative;
+    background-color: white;
+    width: 250px;
+    height: 150px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ff66cc;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  }
+  
+  .heart-seal {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    border-radius: 50%;
+  }
+  
+  .message {
+    margin-top: 50px;
+    font-size: 20px;
+    color: #ff66cc;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  #no-button {
+    background-color: red; /* Red color for No button */
+    margin-top: 10px;
+  }
+  
+  .hidden-message {
+    display: none;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ff66cc;
+    text-align: center;
+    font-weight: bold;
+  }
+  
